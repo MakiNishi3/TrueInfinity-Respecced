@@ -95,7 +95,7 @@ function init() {
 	}
 
 	document.getElementById('asintv').value = game.asintv;
-	setInterval(loop, 50);
+	setInterval(loop, 10);
 }
 
 function firstTime() {
@@ -114,5 +114,5 @@ function fps() {
 	var thisFrameTime = (thisLoop=new Date) - lastLoop;
 	frameTime+= (thisFrameTime - frameTime) / filterStrength;
 	lastLoop = thisLoop;
-	fpsOut.innerHTML = (1000 / frameTime).toFixed(0);
+	fpsOut.innerHTML = (10 / frameTime).toFixed(0);
 }
