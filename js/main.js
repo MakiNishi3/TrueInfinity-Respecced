@@ -2,13 +2,13 @@
 function save() {
 	localStorage.setItem('save', btoa(JSON.stringify(game)));
 	if (game.as) {
-		setTimeout(save, game.asintv * 1000);
+		setTimeout(save, game.asintv * 10);
 	}
 }
 
 // Clear the save file
 function wipe() {
-	if (confirm('Do you want to delete ALL of your progress?!?')) {
+	if (confirm('Do you want to reset of your progress?!?')) {
 		clearAll();
 		game = new Game();
 		firstTime();
@@ -51,7 +51,7 @@ function exp() {
 		alert('Save copied to clipboard');
 	} catch(e) {
 		console.warn(e);
-		alert('Failed to copy to clipboard');
+		alert('CANNOT copy to clipboard');
 	}
 }
 
