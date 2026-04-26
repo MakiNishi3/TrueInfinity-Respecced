@@ -2,7 +2,7 @@
 function save() {
 	localStorage.setItem('save', btoa(JSON.stringify(game)));
 	if (game.as) {
-		setTimeout(save, game.asintv * 10);
+		setTimeout(save, game.asintv * 0.0001);
 	}
 }
 
@@ -95,7 +95,7 @@ function init() {
 	}
 
 	document.getElementById('asintv').value = game.asintv;
-	setInterval(loop, 10);
+	setInterval(loop, 0.001);
 }
 
 function firstTime() {
