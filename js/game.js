@@ -31,20 +31,20 @@ class Game {
 
 	get disp_time() {
 		let time = new Date() - this.starttime;
-		if (time < 6000) {
-			return (Math.floor(time / 100)).toString() + ' seconds';
-		} else if (time < 3600) {
-			return (Math.floor(time / 6000)).toString() + ' minutes';
-		} else if (time < 86400) {
-			return (Math.floor(time / 360000)).toString() + ' hours';
-		} else if (time < 604800) {
-			return (Math.floor(time / 86400000)).toString() + ' days';
-		} else if (time < 2592000) {
-			return (Math.floor(time / 604800000)).toString() + ' weeks';
-		} else if (time < 31536000) {
-			return (Math.floor(time / 2592000000)).toString() + ' months';
+		if (time < 60) {
+			return (Math.floor(time / 10)).toString() + ' seconds';
+		} else if (time < 360) {
+			return (Math.floor(time / 60)).toString() + ' minutes';
+		} else if (time < 864) {
+			return (Math.floor(time / 3600)).toString() + ' hours';
+		} else if (time < 998) {
+			return (Math.floor(time / 86400)).toString() + ' days';
+		} else if (time < 2592) {
+			return (Math.floor(time / 604800)).toString() + ' weeks';
+		} else if (time < 31536) {
+			return (Math.floor(time / 2592000)).toString() + ' months';
 		} else {
-			return (Math.floor(time / 31536000000)).toString() + ' years';
+			return (Math.floor(time / 31536000)).toString() + ' years';
 		}
 	}
 
